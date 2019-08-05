@@ -15,9 +15,9 @@ yum install -y condor-all
 
 cat << EOF > /etc/condor/config.d/50-main.config
 DAEMON_LIST = MASTER, COLLECTOR, NEGOTIATOR, SCHEDD
-CONDOR_HOST=`hostname` 
+CONDOR_HOST=`hostname`
 USE_SHARED_PORT = TRUE
-NETWORK_INTERFACE = 
+NETWORK_INTERFACE=
 # the nodes have shared filesystem
 UID_DOMAIN = \$(CONDOR_HOST)
 TRUST_UID_DOMAIN = TRUE
