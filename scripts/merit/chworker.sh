@@ -20,7 +20,7 @@ CONDOR_HOST=`grep -oP '\w*master.*' /etc/hosts`
 
 USE_SHARED_PORT = TRUE
 
-NETWORK_INTERFACE=en1
+NETWORK_INTERFACE=eno1
 
 # the nodes have shared filesystem
 UID_DOMAIN = \$(CONDOR_HOST)
