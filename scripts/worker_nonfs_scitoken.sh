@@ -10,8 +10,10 @@ yum install -y gcc gcc-c++ make libarchive-devel
 ######################
 
 rpm --import https://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor
+cd /etc/yum.repos.d
 wget https://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-development-rhel8.repo
 yum install -y condor-all
+cd /root
 
 cat << EOF > /etc/condor/config.d/50-main.config
 DAEMON_LIST = MASTER, STARTD
@@ -102,9 +104,3 @@ usermod -aG docker condor
 systemctl enable docker
 systemctl restart docker
 
-#######################
-### SETUP LDM USER ####
-#######################
-
-groupadd casa
-useradd -c "" -d /home/ldm -G casa,docker ldm
