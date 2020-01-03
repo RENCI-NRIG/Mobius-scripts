@@ -4,17 +4,21 @@
 
 yum -y update
 yum install -y gcc gcc-c++ make libarchive-devel wget
+yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+yum install -y python36
+yum -y update
+
+wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/b/boost169-python2-1.69.0-2.el7.x86_64.rpm
+wget http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/b/boost169-python3-1.69.0-2.el7.x86_64.rpm
+rpm -Uvh boost169-*.rpm
 
 ######################
 ### INSTALL CONDOR ###
 ######################
 
 rpm --import https://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor
-cd /etc/yum.repos.d
-wget https://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-development-rhel7.repo
-
+wget https://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-development-rhel7.repo -O /etc/yum.repos.d/htcondor-development-rhel7.repo
 yum install -y condor-all
-cd /root
 
 cat << EOF > /etc/condor/config.d/50-main.config
 DAEMON_LIST = MASTER, COLLECTOR, NEGOTIATOR, SCHEDD
