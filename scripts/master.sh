@@ -3,7 +3,7 @@
 # this script should run as root
 
 yum -y update
-yum install -y gcc gcc-c++ make libarchive-devel
+yum install -y gcc gcc-c++ make libarchive-devel wget
 
 ######################
 ### INSTALL CONDOR ###
