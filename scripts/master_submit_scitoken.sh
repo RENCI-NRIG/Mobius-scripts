@@ -11,7 +11,7 @@ yum install -y gcc gcc-c++ make libarchive-devel wget
 
 rpm --import https://research.cs.wisc.edu/htcondor/yum/RPM-GPG-KEY-HTCondor
 cd /etc/yum.repos.d
-wget https://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-development-rhel8.repo
+wget https://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-development-rhel7.repo
 
 yum install -y condor-all
 cd /root
