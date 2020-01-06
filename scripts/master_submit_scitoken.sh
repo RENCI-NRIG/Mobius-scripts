@@ -56,6 +56,9 @@ HOSTALLOW_WRITE = *
 ALLOW_NEGOTIATOR = *
 ALLOW_READ = *
 ALLOW_WRITE = *
+ALLOW_ADMINISTRATOR= *
+ALLOW_CONFIG = *
+ALLOW_DAEMON = *
 EOF
 
 condor_store_cred -f /etc/condor/pool_password -p c454_c0nd0r_p00l
