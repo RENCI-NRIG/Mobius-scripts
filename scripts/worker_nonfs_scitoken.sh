@@ -62,6 +62,8 @@ SEC_CLIENT_ENCRYPTION = OPTIONAL
 #-- With strong security, do not use IP based controls
 HOSTALLOW_WRITE = *
 ALLOW_NEGOTIATOR = *
+ALLOW_READ = *
+ALLOW_WRITE = *
 
 # dynamic slots
 SLOT_TYPE_1 = cpus=100%,disk=100%,swap=100%

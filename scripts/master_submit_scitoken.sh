@@ -54,6 +54,8 @@ SEC_CLIENT_ENCRYPTION = OPTIONAL
 #-- With strong security, do not use IP based controls
 HOSTALLOW_WRITE = *
 ALLOW_NEGOTIATOR = *
+ALLOW_READ = *
+ALLOW_WRITE = *
 EOF
 
 condor_store_cred -f /etc/condor/pool_password -p c454_c0nd0r_p00l
