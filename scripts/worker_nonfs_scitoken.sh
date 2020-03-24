@@ -23,7 +23,7 @@ yum install -y condor-all
 cat << EOF > /etc/condor/config.d/50-main.config
 DAEMON_LIST = MASTER, STARTD
 
-CONDOR_HOST=`grep -oP '\w*master.*' /etc/hosts`
+CONDOR_HOST=`grep -oP '[\w-]*master.*' /etc/hosts`
 
 USE_SHARED_PORT = TRUE
 
